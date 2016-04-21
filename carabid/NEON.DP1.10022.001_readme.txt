@@ -1,0 +1,131 @@
+Data package from NEON Inc.
+These data are provided under the terms of the NEON data policy, included in this data download.
+Data Product ID: NEON.DOM.SITE.DP1.10022.001
+Data Product Name: Ground beetles sampled from pitfall traps
+Date-Time of Query Submission: 2015-04-29 13:08:05
+Start Date-Time for Data: 2014-04-01 00:00:00
+End Date-Time for Data: 2014-09-30 00:00:00
+
+Site: BART Bartlett Experimental Forest Site, RELOCATABLE
+Geographic coordinates (lat/long): 44.06388/-71.28731
+Domain: D01 Northeast
+
+Site: HARV Harvard Forest Site, CORE
+Geographic coordinates (lat/long): 42.5369/-72.17266
+Domain: D01 Northeast
+
+Site: SCBI Smithsonian Conservation Biology Institute Site, CORE
+Geographic coordinates (lat/long): 38.89292/-78.1395
+Domain: D02 Mid-Atlantic
+
+Site: DSNY Disney Wilderness Preserve Site, RELOCATABLE
+Geographic coordinates (lat/long): 28.12504/-81.4362
+Domain: D03 Southeast
+
+Site: OSBS Ordway-Swisher Biological Station Site, CORE
+Geographic coordinates (lat/long): 29.689282/-81.993431
+Domain: D03 Southeast
+
+Site: JERC Jones Ecological Research Center Site, RELOCATABLE
+Geographic coordinates (lat/long): 31.19484/-84.46861
+Domain: D03 Southeast
+
+Site: UNDE UNDERC Site, CORE
+Geographic coordinates (lat/long): 46.23388/-89.53725
+Domain: D05 Great Lakes
+
+Site: ORNL Oak Ridge Site, CORE
+Geographic coordinates (lat/long): 35.96412/-84.2826
+Domain: D07 Appalachians and Cumberland Plateau
+
+Site: TALL Talladega National Forest Site, CORE
+Geographic coordinates (lat/long): 32.95046/-87.39327
+Domain: D08 Ozarks Complex
+
+Site: STER Sterling Site, RELOCATABLE
+Geographic coordinates (lat/long): 40.4619/-103.0293
+Domain: D10 Central Plains
+
+Site: CPER Central Plains Experimental Range Site, CORE
+Geographic coordinates (lat/long): 40.815534/-104.745602
+Domain: D10 Central Plains
+
+This package was generated on: 2015-04-29
+
+This package contains the following files:
+NEON.D01.BART.DP1.10022.001.bet_IDandpinning.csv
+NEON.D01.BART.DP1.10022.001.bet_fielddata.csv
+NEON.D01.BART.DP1.10022.001.bet_sorting.csv
+NEON.D01.HARV.DP1.10022.001.bet_IDandpinning.csv
+NEON.D01.HARV.DP1.10022.001.bet_fielddata.csv
+NEON.D01.HARV.DP1.10022.001.bet_sorting.csv
+NEON.D02.SCBI.DP1.10022.001.bet_IDandpinning.csv
+NEON.D02.SCBI.DP1.10022.001.bet_fielddata.csv
+NEON.D02.SCBI.DP1.10022.001.bet_sorting.csv
+NEON.D03.DSNY.DP1.10022.001.bet_IDandpinning.csv
+NEON.D03.DSNY.DP1.10022.001.bet_fielddata.csv
+NEON.D03.DSNY.DP1.10022.001.bet_sorting.csv
+NEON.D03.JERC.DP1.10022.001.bet_IDandpinning.csv
+NEON.D03.JERC.DP1.10022.001.bet_fielddata.csv
+NEON.D03.JERC.DP1.10022.001.bet_sorting.csv
+NEON.D03.OSBS.DP1.10022.001.bet_IDandpinning.csv
+NEON.D03.OSBS.DP1.10022.001.bet_fielddata.csv
+NEON.D03.OSBS.DP1.10022.001.bet_sorting.csv
+NEON.D05.UNDE.DP1.10022.001.bet_IDandpinning.csv
+NEON.D05.UNDE.DP1.10022.001.bet_fielddata.csv
+NEON.D05.UNDE.DP1.10022.001.bet_sorting.csv
+NEON.D07.ORNL.DP1.10022.001.bet_IDandpinning.csv
+NEON.D07.ORNL.DP1.10022.001.bet_fielddata.csv
+NEON.D07.ORNL.DP1.10022.001.bet_sorting.csv
+NEON.D08.TALL.DP1.10022.001.bet_IDandpinning.csv
+NEON.D08.TALL.DP1.10022.001.bet_fielddata.csv
+NEON.D08.TALL.DP1.10022.001.bet_sorting.csv
+NEON.D10.CPER.DP1.10022.001.bet_IDandpinning.csv
+NEON.D10.CPER.DP1.10022.001.bet_fielddata.csv
+NEON.D10.CPER.DP1.10022.001.bet_sorting.csv
+NEON.D10.STER.DP1.10022.001.bet_IDandpinning.csv
+NEON.D10.STER.DP1.10022.001.bet_fielddata.csv
+NEON.D10.STER.DP1.10022.001.bet_sorting.csv
+NEON.DOC.001100vB.pdf
+NEON.DOC.001238vA_DRAFT.pdf
+NEON.DP1.10022.001_readme.txt
+NEON.DP1.10022.001_variables.csv
+NeonDataPolicy.txt
+
+
+
+Data Product Description
+
+This data product contains the quality-controlled, native sampling resolution data from NEON's ground beetle sampling and specimen processing protocols. Ground beetle abundance and diversity are sampled at regular intervals by NEON field technicians at core and relocatable sites.  Sampling occurs biweekly throughout the growing season, or from 15 April through 17 September, whichever is shorter.  Ground beetles are sampled using pitfall traps (16 oz deli containers filled with propylene glycol).  Four traps are deployed in each of 10 plots at each NEON site, with traps arrayed approximately 20 meters from the center of the plot in each of the four cardinal directions.  Following trap collection, Carabid beetles are sorted by NEON technicians, identified to species or morphospecies, and a subset of these are pointed or pinned. A value of 'vial of pooled individuals' in the specimenSource field of the IDandpinning table indicates that the same individual beetle was tallied in both the sorting and IDandpinning tables; users wishing to calculate total abundance or diversity metrics should account for this in any analyses to avoid double counting.  For additional protocol details, see the TOS Protocol and Procedure: Ground Beetle Sampling and the TOS Protocol and Procedure: Ground Beetle and Mosquito Specimen Processing. Products resulting from ground beetle sampling include parataxonomist species identifications and/or morphospecies identifications of all ground beetles, counts of common carabids, which are archived in bulk, and a unique identifier for each individual pinned or pointed.  Future updates to this product will include expert taxonomist and/or DNA barcoding identification of a subset of individuals.  
+
+
+The data download contains 3 files:
+NEON.DOM.SITE.DP1.10022.001_bet_fielddata.csv - Ground beetle metadata on field collection.
+NEON.DOM.SITE.DP1.10022.001_bet_sorting.csv - Sorting of field-collected pitfall samples by NEON parataxonomists.
+NEON.DOM.SITE.DP1.10022.001_bet_IDandpinning.csv - Ground beetle pinning/pointing and identifications by NEON parataxonomists.
+
+Term descriptions, data types, and units can be found in:
+NEON.DP1.10022.001_variables.csv - Descriptions of all fields used in the above data files.
+
+Additional metadata for this data product available for download at http://data.neoninc.org/documents includes:
+TOS Protocol and Procedure: Ground Beetle sampling: NEON.DOC.014050.pdf
+TOS Protocol and Procedure: Ground beetle and mosquito specimen processing: NEON.DOC.00100vB.pdf
+NEON Algorithm Theoretical Basis Document: TOS Ground Beetle Abundance and Diversity - QA/QC of Raw Field and Lab Data: NEON.DOC.001238vA_DRAFT.pdf
+Sampling locations: NEON_TOS_spatialData.zip
+Ground beetle taxonomy: NEON_bet_taxonomy.zip
+- Taxonomy primarily based on Bousquet, Y. 2012. Catalogue of Geadephaga (Coleoptera, Adephaga) of America, north of Mexico. ZooKeys, (245), 1.
+Ground beetle native status codes: NEON_bet_nativeStatusCodes.zip
+- Geographic distributions and nativity status primarily based on Bousquet, Y. 2012. Catalogue of Geadephaga (Coleoptera, Adephaga) of America, north of Mexico. ZooKeys, (245), 1 and the Integrated Taxonomic Information System (www.itis.gov).
+Small mammal taxonomy: NEON_mam_taxonomy.zip 
+- Taxonomy based on Wilson D. E. and D. M. Reeder. 2005. Mammal Species of the World; A Taxonomic and Geographic Reference. Third edition. Johns Hopkins University Press; Baltimore, MD.
+Small mammal native status codes: NEON_mam_nativeStatusCodes.zip
+- Geographic distributions and nativity status based on Kays R. W. and D. E. Wilson. 2009. Mammals of North America. 2nd edition. Princeton University Press; Princeton; NJ.
+Herp taxonomy: NEON_herp_taxonomy.zip 
+- Taxonomy based on Crother, B. I., J. Boundy, F. T. Burbrink, J. A. Campbell, K. De Queiroz, D. R. Frost, D. M. Green, R. Highton, J. B. Iverson, F. Kraus, R. W. Mcdiarmid, J. R. Mendelson III, P. A. Meylan, R. A. Pyron, T. W. Reeder, M. E. Seidel, S. G. Tilley, D. B. Wake, and V. Street. 2012. Scientific and standard english names of amphibians and reptiles of North America north of Mexico, with comments regarding confidence in our understanding. 7th ed. Society for the Study of Amphibians and Reptiles.
+Herp native status codes: NEON_herp_nativeStatusCodes.zip
+- Geographic distributions and nativity status based on range maps provided by the IUCN (International Union for Conservation of Nature), Conservation International & NatureServe (downloaded on October 2, 2014).
+
+These data are considered provisional (created using a baseline algorithm approach with a minimal or reduced set of QA/QC checks). Minor updates to the QA/QC and processing algorithms will occur during construction (prior to 2017). Changes to provisional data products will occur on an as-needed basis. Please check back to this site for updates tracked in change logs. Query reproducibility on provisional data cannot be guaranteed.
+
+Change log:
+

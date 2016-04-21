@@ -1,0 +1,141 @@
+Data package from NEON Inc.
+These data are provided under the terms of the NEON data policy, included in this data download.
+Data Product ID: NEON.DOM.SITE.DP1.10058.001
+Data Product Name: Plant presence and percent cover
+Date-Time of Query Submission: 2015-05-01 15:48:56
+Start Date-Time for Data: 2014-03-01 00:00:00
+End Date-Time for Data: 2014-09-30 00:00:00
+
+Site: BART Bartlett Experimental Forest Site, RELOCATABLE
+Geographic coordinates (lat/long): 44.06388/-71.28731
+Domain: D01 Northeast
+
+Site: HARV Harvard Forest Site, CORE
+Geographic coordinates (lat/long): 42.5369/-72.17266
+Domain: D01 Northeast
+
+Site: SCBI Smithsonian Conservation Biology Institute Site, CORE
+Geographic coordinates (lat/long): 38.89292/-78.1395
+Domain: D02 Mid-Atlantic
+
+Site: DSNY Disney Wilderness Preserve Site, RELOCATABLE
+Geographic coordinates (lat/long): 28.12504/-81.4362
+Domain: D03 Southeast
+
+Site: OSBS Ordway-Swisher Biological Station Site, CORE
+Geographic coordinates (lat/long): 29.689282/-81.993431
+Domain: D03 Southeast
+
+Site: UNDE UNDERC Site, CORE
+Geographic coordinates (lat/long): 46.23388/-89.53725
+Domain: D05 Great Lakes
+
+Site: ORNL Oak Ridge Site, CORE
+Geographic coordinates (lat/long): 35.96412/-84.2826
+Domain: D07 Appalachians and Cumberland Plateau
+
+Site: TALL Talladega National Forest Site, CORE
+Geographic coordinates (lat/long): 32.95046/-87.39327
+Domain: D08 Ozarks Complex
+
+Site: STER Sterling Site, RELOCATABLE
+Geographic coordinates (lat/long): 40.4619/-103.0293
+Domain: D10 Central Plains
+
+Site: CPER Central Plains Experimental Range Site, CORE
+Geographic coordinates (lat/long): 40.815534/-104.745602
+Domain: D10 Central Plains
+
+This package was generated on: 2015-05-01
+
+This package contains the following files:
+NEON.D01.BART.DP1.10058.001.div_100m2Data.csv
+NEON.D01.BART.DP1.10058.001.div_10m2Data.csv
+NEON.D01.BART.DP1.10058.001.div_1m2Data.csv
+NEON.D01.BART.DP1.10058.001.div_1m2Variables.csv
+NEON.D01.BART.DP1.10058.001.div_400m2Data.csv
+NEON.D01.HARV.DP1.10058.001.div_100m2Data.csv
+NEON.D01.HARV.DP1.10058.001.div_10m2Data.csv
+NEON.D01.HARV.DP1.10058.001.div_1m2Data.csv
+NEON.D01.HARV.DP1.10058.001.div_1m2Variables.csv
+NEON.D01.HARV.DP1.10058.001.div_400m2Data.csv
+NEON.D02.SCBI.DP1.10058.001.div_100m2Data.csv
+NEON.D02.SCBI.DP1.10058.001.div_10m2Data.csv
+NEON.D02.SCBI.DP1.10058.001.div_1m2Data.csv
+NEON.D02.SCBI.DP1.10058.001.div_1m2Variables.csv
+NEON.D02.SCBI.DP1.10058.001.div_400m2Data.csv
+NEON.D03.DSNY.DP1.10058.001.div_100m2Data.csv
+NEON.D03.DSNY.DP1.10058.001.div_10m2Data.csv
+NEON.D03.DSNY.DP1.10058.001.div_1m2Data.csv
+NEON.D03.DSNY.DP1.10058.001.div_1m2Variables.csv
+NEON.D03.DSNY.DP1.10058.001.div_400m2Data.csv
+NEON.D03.OSBS.DP1.10058.001.div_100m2Data.csv
+NEON.D03.OSBS.DP1.10058.001.div_10m2Data.csv
+NEON.D03.OSBS.DP1.10058.001.div_1m2Data.csv
+NEON.D03.OSBS.DP1.10058.001.div_1m2Variables.csv
+NEON.D03.OSBS.DP1.10058.001.div_400m2Data.csv
+NEON.D05.UNDE.DP1.10058.001.div_100m2Data.csv
+NEON.D05.UNDE.DP1.10058.001.div_10m2Data.csv
+NEON.D05.UNDE.DP1.10058.001.div_1m2Data.csv
+NEON.D05.UNDE.DP1.10058.001.div_1m2Variables.csv
+NEON.D05.UNDE.DP1.10058.001.div_400m2Data.csv
+NEON.D07.ORNL.DP1.10058.001.div_100m2Data.csv
+NEON.D07.ORNL.DP1.10058.001.div_10m2Data.csv
+NEON.D07.ORNL.DP1.10058.001.div_1m2Data.csv
+NEON.D07.ORNL.DP1.10058.001.div_1m2Variables.csv
+NEON.D07.ORNL.DP1.10058.001.div_400m2Data.csv
+NEON.D08.TALL.DP1.10058.001.div_100m2Data.csv
+NEON.D08.TALL.DP1.10058.001.div_10m2Data.csv
+NEON.D08.TALL.DP1.10058.001.div_1m2Data.csv
+NEON.D08.TALL.DP1.10058.001.div_1m2Variables.csv
+NEON.D08.TALL.DP1.10058.001.div_400m2Data.csv
+NEON.D10.CPER.DP1.10058.001.div_100m2Data.csv
+NEON.D10.CPER.DP1.10058.001.div_10m2Data.csv
+NEON.D10.CPER.DP1.10058.001.div_1m2Data.csv
+NEON.D10.CPER.DP1.10058.001.div_1m2Variables.csv
+NEON.D10.CPER.DP1.10058.001.div_400m2Data.csv
+NEON.D10.STER.DP1.10058.001.div_100m2Data.csv
+NEON.D10.STER.DP1.10058.001.div_10m2Data.csv
+NEON.D10.STER.DP1.10058.001.div_1m2Data.csv
+NEON.D10.STER.DP1.10058.001.div_1m2Variables.csv
+NEON.D10.STER.DP1.10058.001.div_400m2Data.csv
+NEON.DOC.014042vC.pdf
+NEON.DP1.10058.001_readme.txt
+NEON.DP1.10058.001_variables.csv
+NEON_TOS_spatialData.zip
+NeonDataPolicy.txt
+
+
+
+Data Product Description
+This data product contains the quality-controlled, native sampling resolution data from NEON'splant diversity sampling protocol. Plant diversity is sampled once or twice per year by NEON field technicians at core and relocatable sites. Sampling is based on plant phenology, with timing of sampling targeted to occur during a 1-2 month period surrounding peak phenology (when most species are flowering).  Sites with more than one peak may be sampled twice per year. Plant presence is tallied each of 3-45 400m^2 plots in each NEON site, depending on site size. Each plot includes 8 1m^2, 8 10m^2, and 4 100m^2 nested subplots. Data collected in 1m^2 subplots includes ocular estimates of plant cover and the cover of abiotic variables, whereas the larger plots contain only species lists.  For additional details on protocol, see the TOS Protocol and Procedure: Plant Diversity Sampling. Products resulting from this sampling include vascular plant species identification, height, and cover of abiotic variables, non-vascular plants and dead plant material.  
+
+The data download contains 5 files:
+NEON.DOM.SITE.DP1.10058.001_div_1m2Data - Plant cover, height, and species identifications within 1m^2 subplots
+NEON.DOM.SITE.DP1.10058.001_div_1m2Variables - Cover of other variables present within 1m^2 subplots, including abiotic variables, non-vascular plants, and dead plant material
+NEON.DOM.SITE.DP1.10058.001_div_10m2Data - Species identifications within 10m^2 subplots
+NEON.DOM.SITE.DP1.10058.001_div_100m2Data - Species identifications within 100m^2 subplots
+NEON.DOM.SITE.DP1.10058.001_div_400m2Data - Species identifications within 400m^2 plots
+
+
+Term descriptions, data types, and units can be found in:
+NEON.DP1.10058.001_variables.csv - Descriptions of all fields used in the above data files.
+
+Additional metadata for this data product available for download at http://data.neoninc.org/documents  includes:
+TOS Protocol and Procedure: Plant Diversity Sampling: NEON.DOC.014042vC.pdf
+NEON Algorithm Theoretical Basis Document: TOS Plant Diversity - QA/QC of Raw Field and Lab Data: NEON.DOC.001237vA_DRAFT.pdf
+Sampling locations: NEON_TOS_spatialData.zip
+Plant taxonomy: NEON_pla_taxonomy.zip
+- Taxonomy based on USDA, NRCS. 2014. The PLANTS Database (http://plants.usda.gov, 25 August 2014). National Plant Data Team, Greensboro, NC 27401-4901 USA.
+Plant native status codes: NEON_pla_nativeStatusCodes.zip
+ - Geographic distributions and nativity status based on USDA, NRCS. 2014. The PLANTS Database (http://plants.usda.gov, 25 August 2014). National Plant Data Team, Greensboro, NC 27401-4901 USA.
+
+These data are considered provisional (created using a baseline algorithm approach with a minimal or reduced set of QA/QC checks). Minor updates to the QA/QC and processing algorithms will occur during construction (prior to 2017). Changes to provisional data products will occur on an as-needed basis. Please check back to this site for updates tracked in change logs. Query reproducibility on provisional data cannot be guaranteed.  
+
+Change log:
+04/03/2015: There is a known bug whereby a portion of the data may be omitted from the post to the database, resulting in an incomplete set of records presented on the portal.  This issue affects data from the following sites:HARV, SCBI. [Resolved 4/19/2015]
+01/07/2015: There is a known bug whereby the scientificName and taxonRank values in the data may show the scientificName of a synonym rather than that associated with the accepted taxonomy.  We are working to resolve this as quickly as possible.  In the meantime, it is recommended that data users work with the taxonID, not scientificName.  The correct scientificName and taxonRank associated with each taxonID can be found in NEON_pla_taxonomy.zip. [Resolved 4/29/2015]
+
+
+
+
