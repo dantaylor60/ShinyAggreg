@@ -21,4 +21,5 @@ ui <- shinyUI(fluidPage(
   
 ))
 
+#source("server.R")
 #shinyApp(ui = ui, server = serverAgg)
