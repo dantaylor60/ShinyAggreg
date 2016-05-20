@@ -42,14 +42,12 @@ serverAgg <- function(input,output){
         otherFile = "IDandpinning"
         fieldFiles = "fielddata"
         uniqueid = c("plotID","trapID","collectDate")
-        mixVars = c("decimalLatitude","decimalLongitude","boutNumber")
+        mixVars = c("daysOfTrapping","decimalLatitude","decimalLongitude","boutNumber")
       }else{
         if(input$typeFiles=="none"){
           stop("choose 'file type for plant presence' different to 'none'")
         }else{
-          #vecplants <- c('1m2Data','10m2Data','100m2Data','400m2Data')
-          #pos = which(vecplants%in%input$typeFiles)
-          otherFile = input$typeFiles#vecplants[pos]
+          otherFile = input$typeFiles
         }
         fieldFiles = "Variables"
         uniqueid = c("plotID","subplotID","date")
@@ -95,7 +93,17 @@ serverAgg <- function(input,output){
     dateValuesDom = chron(as.character(dataAllDomains[,dateVar]),format=formatTime)
     dataAllDomains$yr <- as.character(years(dateValuesDom))
     dataAllDomains$month <- as.numeric(months(dateValuesDom))
-    
+    if(input$group=="smallMammal"){
+      eventIDunique <- as.character(unique(dataAllDomains$eventID))
+      ndays <- 0
+      indDom <- indField <- logical(0)
+      for(id in eventIDunique){
+        indDom <- (dataAllDomains$eventID==id)
+        indField <- (dataAllField$eventID==id)
+        ndays =as.numeric(max(dateValuesDom[indDom])-min(dateValuesDom[indDom]))
+        dataAllField$samplingEffort[indField]=dataAllField$samplingEffort[indField]*ndays
+      }
+    }
     #dateValuesField = chron(as.character(dataAllField[,dateVar]),format=formatTime)
     #dataAllField$yr <- as.character(years(dateValuesField))
     #dataAllField$month <- as.numeric(months(dateValuesField))
@@ -139,7 +147,7 @@ serverAgg <- function(input,output){
                      value.var="taxonID",fun.aggregate=length,fill=0)
     otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
                           as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
-                          fun.aggregate=median,na.rm=T,fill=0)
+                          fun.aggregate=mean,na.rm=T,fill=0)
     aggData <- merge(y=aggData, x=otheraggData, all.x = T,all.y = T)
     #get rid of subsetting
     aggData
