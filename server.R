@@ -112,7 +112,7 @@ serverAgg <- function(input,output){
     dataAllDomains$taxonID[is.na(dataAllDomains$taxonID)] <- "notID"
     
     if(otherFile=="IDandpinning"){
-      mm <- as.character(dataAllDomains$boutNumber)#as.character(dataAllDomains$month)
+      mm <- as.character(dataAllDomains$month)
       mm[nchar(mm)==1] <- paste0("0",mm[nchar(mm)==1],sep="")
       dataAllDomains$Bout <- with(dataAllDomains,paste(yr,mm,sep="."))  
     }else{
@@ -142,18 +142,24 @@ serverAgg <- function(input,output){
     
     aggVars <- c(varsaggSpace,varsaggTime)
     
-    aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
-                     value.var="taxonID",fun.aggregate=length,fill=0)
     if(input$group=="carabid"){
+      #if(input$time.Agg=="byBout"){
+      #  aggVars[aggVars=="Bout"]="boutNumber"
+      #  mixVars <- mixVars[mixVars!="boutNumber"]
+      #}
+      
+      aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
+                       value.var="taxonID",fun.aggregate=length,fill=0)
+      
       mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
-      otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars[mixVars!="daysOfTrapping"])],
+      dataAllDomains$daysOfTrapping <- dataAllDomains$daysOfTrapping*4
+      otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],
                                  id.vars=aggVars),as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
                             fun.aggregate=median,na.rm=T,fill=0)
-      otheraggData$daysOfTrapping <- dcast(melt(dataAllDomains[,c(aggVars,"daysOfTrapping")],
-                                                id.vars=aggVars),as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
-                                           fun.aggregate=sum,na.rm=T,fill=0)$daysOfTrapping
       otheraggData$daysOfTrapping[otheraggData$daysOfTrapping==0] = NA
     }else{
+      aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
+                       value.var="taxonID",fun.aggregate=length,fill=0)
       mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
       otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
                             as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
