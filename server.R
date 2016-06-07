@@ -51,7 +51,12 @@ serverAgg <- function(input,output){
         }
         fieldFiles = "Variables"
         uniqueid = c("plotID","subplotID","date")
-        mixVars = NULL#c("percentCover")
+        mixVars = NULL#c("percentCover")  
+        #if(input$typeFiles=='1m2Data'){
+        #  mixVars = "percentCover"
+        #}else{
+        #  mixVars = NULL#c("percentCover")  
+        #}
       }
     }
     currentFiles   <- filenames[grep(otherFile,filenames)]  
@@ -158,12 +163,27 @@ serverAgg <- function(input,output){
                             fun.aggregate=median,na.rm=T,fill=0)
       otheraggData$daysOfTrapping[otheraggData$daysOfTrapping==0] = NA
     }else{
-      aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
-                       value.var="taxonID",fun.aggregate=length,fill=0)
-      mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
-      otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
-                            as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
-                            fun.aggregate=median,na.rm=T,fill=0)  
+      #aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
+      #                 value.var="taxonID",fun.aggregate=length,fill=0)
+      #mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
+      #otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
+      #                      as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
+      #                      fun.aggregate=median,na.rm=T,fill=0)  
+      if((input$group=="plantPresenceCover")&(input$typeFiles=='1m2Data')){
+        aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
+                         value.var="percentCover",fun.aggregate=mean,na.rm=T,fill=0)
+        mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
+        otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
+                              as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
+                              fun.aggregate=median,na.rm=T,fill=0)  
+      }else{
+       aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
+                        value.var="taxonID",fun.aggregate=length,fill=0)
+       mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
+       otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
+                             as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
+                             fun.aggregate=median,na.rm=T,fill=0)  
+      }
     }
     
     aggData <- merge(y=aggData, x=otheraggData, all.x = T,all.y = T)
