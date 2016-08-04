@@ -12,6 +12,20 @@ ui <- shinyUI(fluidPage(
   
   mainPanel(
     tabsetPanel(
+      tabPanel('help',
+               em(helpText("This code will help you extract data from the NEON project for three different 
+                            types of species: small mammals, carabids or plant cover.  These data can then be aggregated 
+                           using different choices of spatial and temporal resolution.")),
+               helpText(strong('data type:'), "Choose the taxa for which you want data."),
+               helpText(strong('spatial scale:'), "Choice of spatial aggregation scale."),
+               helpText(strong('temporal scale:'), "Choice of temporal aggregation scale."),
+               helpText(strong('file type for plant presence:'), "If data type = 'plantPresenceCover' choose the scale at which the data was collected 
+                        among 1m2, 10m2, 100m2 or 400m2"),
+               helpText(strong('number of columns to display:'), "Given that the NEON files contain information on several hundreds of 
+                        species, this choice is only used for immediate visualization purposes.  It determines the number of columns 
+                        that are shown in the 'preview data' tab"),
+               helpText(strong('Download data:'), "Press this button to generate and download to your computer 
+                        a copy of the dataset.")),
       tabPanel('preview data',
                dataTableOutput("aggData")),
       tabPanel('summary',
@@ -21,5 +35,5 @@ ui <- shinyUI(fluidPage(
   
 ))
 
-#source("server.R")
-#shinyApp(ui = ui, server = serverAgg)
+source("server.R")
+shinyApp(ui = ui, server = serverAgg)
