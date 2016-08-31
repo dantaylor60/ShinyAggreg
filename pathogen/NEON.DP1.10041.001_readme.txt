@@ -1,0 +1,74 @@
+Data package from NEON Inc.
+These data are provided under the terms of the NEON data policy, included in this data download.
+Data Product ID: NEON.DOM.SITE.DP1.10041.001
+Data Product Name: Mosquito-borne pathogen status
+Date-Time of Query Submission (UTC): 2016-08-12 22:09:38
+Start Date-Time for Data (UTC): 2014-04-01 00:00:00
+End Date-Time for Data (UTC): 2014-09-30 23:59:59
+Data Package Type: Basic
+
+Site: OSBS Ordway-Swisher Biological Station Site, CORE
+Geographic coordinates (lat/long): 29.6892820535/-81.9934311263
+Domain: D03 Southeast
+
+Site: TALL Talladega National Forest Site, CORE
+Geographic coordinates (lat/long): 32.9504701111/-87.3932586389
+Domain: D08 Ozarks Complex
+
+Site: STER Sterling Site, RELOCATABLE
+Geographic coordinates (lat/long): 40.461893852/-103.029290407
+Domain: D10 Central Plains
+
+Site: CPER Central Plains Experimental Range Site, CORE
+Geographic coordinates (lat/long): 40.81553/-104.7456
+Domain: D10 Central Plains
+
+This package was generated on: 2016-08-12
+
+This package contains the following files:
+NEON.D03.OSBS.DP1.10041.001.mos_pathogenresults.csv
+NEON.D08.TALL.DP1.10041.001.mos_pathogenresults.csv
+NEON.D10.CPER.DP1.10041.001.mos_pathogenresults.csv
+NEON.D10.STER.DP1.10041.001.mos_pathogenresults.csv
+NEON.DP1.10041.001_readme.txt
+NEON.DP1.10041.001_variables.csv
+NeonDataPolicy.txt
+
+
+
+
+Data Product Description
+This data product contains the quality-controlled, native sampling resolution data derived from NEON's mosquito sampling protocol. 
+Mosquitoes are sampled at regular intervals by NEON field technicians at NEON terrestrial sites. See "Mosquitoes sampled from CO2 traps" for data on the abundance and diversity of mosquitoes collected at NEON sites. Following collection, samples are sent to a professional taxonomist where a subsample the catch generated from each trap is identified to species and sex. A subset of postively-identified mosquitoes are later processed for pathogen testing. Only female mosquitoes identified to the species-level and captured in sufficient quantity over a season from likely vector species will be eligible for pathogen testing. Mosquitoes that meet pathogen-testing criteria collected within the same site and bout are grouped across all samples into a large pool of female conspecifics (mosquitoes within the same large grouping will have the same testingID). This large pool will be broken up into subsamples each assigned a unique identifier (testingVialID) which contains a defined number of mosquitoes (poolSize). Each subsample (identified by testingVialID) will be tested one or more times using a variety of methods (i.e., vero cell culture, sequencing, etc.). Products resulting from this sampling include test results of mosquito pools derived from identified mosquitoes collected during NEON mosquito sampling. 
+
+The data download contains 1 file:
+NEON.DOM.SITE.DP1.10041.001_mos_pathogenresults - Mosquito pathogen testing results from external labs.
+
+File naming convention for NEON observation systems data files: NEON.DOM.SITE.DPL.PRNUM.REV.DESC, where:
+- NEON denotes the organizational origin of the data product and identifies the product as operational; data collected as part of a special data collection exercise are designated by a separate, unique alphanumeric code created by the PI
+- DOM is a three-character alphanumeric code, referring to the domain of data acquisition (D01 - D20)
+- SITE is four-character alphanumeric code, referring to the site of data acquisition; all sites are designated by a standardized four-character alphabetic code
+- DPL is a three-character alphanumeric code, referring to data product processing level
+- PRNUM is a five-character numeric code, referring to the data product number (see the Data Product Catalog at http://data.neoninc.org/data-product-catalog)
+- REV is a three-digit designation, referring to the revision number of the data product; it is also used to track "Data Product Maturity", from Engineering -Grade/Provisional to Science-Grade (001 = initial REV, Engineering-Grade or Provisional; 101 = initial REV, Science-Grade)
+- DESC is an abbreviated description of the data product 
+
+Term descriptions, data types, and units can be found in:
+NEON.DOM.SITE.DP1.10041.001_variables.csv - Descriptions of all fields used in the above data files.
+
+Additional metadata for this data product available for download at http://data.neoninc.org/documents includes:
+TOS Protocol and Procedure: Mosquito Sampling: NEON.DOC.014049vG.pdf
+NEON Algorithm Theoretical Basis Document: TOS Mosquito Abundance and Diversity - QA/QC of Raw Field and Lab Data: NEON.DOC.001239vA.pdf
+Standard Operating Procedures (SOP) implemented by each lab performing pathogen testing analysis: UofI_Pathogen_Testing_SOP.pdf and CAES_Pathogen_Testing_SOP.pdf
+Sampling locations: NEON_TOS_spatialData.zip
+Mosquito taxonomy: NEON_mos_taxonomy.zip - Taxonomy based on Darsie Jr., R. F., and R. A. Ward. 2005. Identification and geographical distribution of the mosquitoes of North America, North of Mexico. University Press of Florida, Gainesville.
+
+All of the above data are also directly linked to the mosquito abundance and diversity data, as described in the NEON Algorithm Theoretical Basis Document: TOS Mosquito Abundance and Diversity - QA/QC of Raw Field and Lab Data.
+
+These data are considered provisional (created using a baseline algorithm approach with a minimal or reduced set of QA/QC checks). Minor updates to the QA/QC and processing algorithms will occur during construction (prior to 2017). Changes to provisional data products will occur on an as-needed basis.  Please check back to this site for updates tracked in change logs.  Query reproducibility on provisional data cannot be guaranteed.  
+
+
+Change log:
+5/15/2016: Mosquito taxonomy was severely revised in 2004 such that genus Aedes was drastically reorganized. At a later date, mosquito data will be reprocessed to reflect this updated taxonomy.
+5/15/2016: From 2013 to 2016, University of Illinois (UofI) and Connecticut (CAES) performed pathogen testing as described in the attached SOP documents. In the dataset, CAESprotocolA refers to the CAES_Pathogen_Testing_SOP.pdf and Other refers to the UofI_Pathogen_Testing_SOP.pdf. In future contracts, the data will be reprocessed so that a named protocol in the data are reflected as the title of the SOP to which it refers.
+

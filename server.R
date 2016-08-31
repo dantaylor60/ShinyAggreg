@@ -44,26 +44,38 @@ serverAgg <- function(input,output){
         uniqueid = c("plotID","trapID","collectDate")
         mixVars = c("daysOfTrapping","decimalLatitude","decimalLongitude","boutNumber")
       }else{
-        if(input$typeFiles=="none"){
-          stop("choose 'file type for plant presence' different to 'none'")
-        }else{
-          otherFile = input$typeFiles
-        }
-        fieldFiles = "Variables"
-        uniqueid = c("plotID","subplotID","date")
-        mixVars = NULL#c("percentCover")  
-        #if(input$typeFiles=='1m2Data'){
-        #  mixVars = "percentCover"
-        #}else{
-        #  mixVars = NULL#c("percentCover")  
-        #}
+       if(input$group=="mosquito"){
+         otherFile = "identification"
+         fieldFiles = "samplingeffort"
+         uniqueid = c("plotID","eventID","collectDateTime")
+         mixVars = NULL
+       }else{
+         if(input$group=="pathogen"){
+           otherFile = "pathogenresults"
+           fieldFiles = NULL
+           uniqueid = c("plotID","eventID","endcollectDate")
+           mixVars = NULL
+         }else{
+           if(input$typeFiles=="none"){
+             stop("choose 'file type for plant presence' different to 'none'")
+           }else{
+             otherFile = input$typeFiles
+           }
+           fieldFiles = "Variables"
+           uniqueid = c("plotID","subplotID","date")
+           mixVars = NULL#c("trapHours")  
+         }
+       }
       }
     }
-    currentFiles   <- filenames[grep(otherFile,filenames)]  
-    fielddataFiles   <- filenames[grep(fieldFiles,filenames)]  
-    
+    currentFiles   <- filenames[grep(otherFile,filenames)] 
     fileData <- matrix( unlist(strsplit(currentFiles,'[.]')),length(currentFiles),byrow=T)
-    siteData <- matrix( unlist(strsplit(fielddataFiles,'[.]')),length(fielddataFiles),byrow=T)
+    
+    if(input$group!="pathogen"){
+      fielddataFiles   <- filenames[grep(fieldFiles,filenames)]    
+      siteData <- matrix( unlist(strsplit(fielddataFiles,'[.]')),length(fielddataFiles),byrow=T)
+    }
+    
     
     domain  <- fileData[,2]
     site  <- fileData[,3]
@@ -74,20 +86,34 @@ serverAgg <- function(input,output){
     
     for(k in 1:nsite){
       kfile  <- paste(input$group,'/',currentFiles[k],sep='')
-      kdat <- read.csv(kfile,header=T) 
+      kdat <- read.csv(kfile,header=T,na.strings=c(""," "))
       dataAllDomains[[site[k]]] <- kdat
       
-      ffile <-  paste(input$group,'/',fielddataFiles[k],sep='')
-      fdat <- read.csv(ffile,header=T) 
-      dataAllField[[site[k]]] <- fdat[,-which(names(fdat)=="remarks")]
+      if(input$group!="pathogen"){
+        ffile <-  paste(input$group,'/',fielddataFiles[k],sep='')
+        fdat <- read.csv(ffile,header=T,na.strings=c(""," "))
+        dataAllField[[site[k]]] <- fdat[,which(names(fdat)!="remarks")]
+      }
     }
     
-    dataAllDomains <- data.frame(do.call(rbind,dataAllDomains),stringsAsFactors = F)
+    colDom <- ncol(dataAllDomains[[1]])
+    variab <- NULL
+    datares <- list()
+    namvars <- colnames(dataAllDomains[[1]])
+    
+    for(jj in 1:colDom){
+      datares[[jj]] <- unlist(lapply(dataAllDomains,"[",,jj))
+    }
+    names(datares) <- namvars
+    dataAllDomains <- data.frame(datares,stringsAsFactors = F)
+    #dataAllDomains <- data.frame(do.call(rbind,dataAllDomains),stringsAsFactors = F)
     dataAllField <- do.call(rbind,dataAllField)[,c(uniqueid,mixVars)]
     
     
     dataAllDomains[dataAllDomains==""] = NA
-    dateVar <- ifelse(otherFile!='IDandpinning',"date","collectDate")
+    dateVar <- ifelse(otherFile=='IDandpinning',"collectDate",
+                      ifelse(otherFile=='identification',"collectDateTime",
+                             ifelse(otherFile=='pathogenresults',"endCollectDate","date")))
     formatTime <- "y-m-d"
     if(otherFile%in%c('capturedata','IDandpinning')){
       dataAllDomains$individualID <- as.character(dataAllDomains$individualID)
@@ -95,6 +121,15 @@ serverAgg <- function(input,output){
     }else{
       dataAllDomains = dataAllDomains[!is.na(dataAllDomains$eventID),]
     }
+    
+    if(input$group%in%c("mosquito","pathogen")){
+      spl = ifelse(input$group=="mosquito","T"," ")
+      dataAllDomains[,dateVar] <- unlist(
+        lapply(as.character(dataAllDomains[,dateVar]),function(ss){
+          strsplit(x=ss,split=spl)[[1]][1]  
+        }))
+    }
+    
     dateValuesDom = chron(as.character(dataAllDomains[,dateVar]),format=formatTime)
     dataAllDomains$yr <- as.character(years(dateValuesDom))
     dataAllDomains$month <- as.numeric(months(dateValuesDom))
@@ -105,9 +140,13 @@ serverAgg <- function(input,output){
       for(id in eventIDunique){
         indDom <- (dataAllDomains$eventID==id)
         indField <- (dataAllField$eventID==id)
-        ndays =as.numeric(max(dateValuesDom[indDom])-min(dateValuesDom[indDom]))
+        ndays =1+as.numeric(max(dateValuesDom[indDom])-min(dateValuesDom[indDom]))
         dataAllField$samplingEffort[indField]=dataAllField$samplingEffort[indField]*ndays
       }
+    }
+    if(input$group%in%c("mosquito","pathogen")){
+      #dimnames(dataAllField)[2][colnames(dataAllField)=="trapHours"] <- "samplingEffort"
+      colnames(dataAllDomains)[colnames(dataAllDomains)=="scientificName"] <- "taxonID"
     }
     #dateValuesField = chron(as.character(dataAllField[,dateVar]),format=formatTime)
     #dataAllField$yr <- as.character(years(dateValuesField))
@@ -132,7 +171,7 @@ serverAgg <- function(input,output){
     }
     #-----------
     colKeep <- c(names(dataAllDomains),mixVars)
-    if(input$group!="plantPresenceCover"){
+    if(!(input$group%in%c("plantPresenceCover","pathogen"))){
       dataAllDomains <- merge(x=dataAllDomains, y=dataAllField, by = uniqueid,all.x = T,all.y = F)
       dataAllDomains <- dataAllDomains[!duplicated(dataAllDomains),]  
     }
@@ -160,7 +199,7 @@ serverAgg <- function(input,output){
       dataAllDomains$daysOfTrapping <- dataAllDomains$daysOfTrapping*4
       otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],
                                  id.vars=aggVars),as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
-                            fun.aggregate=median,na.rm=T,fill=0)
+                            fun.aggregate=mean,na.rm=T,fill=0)
       otheraggData$daysOfTrapping[otheraggData$daysOfTrapping==0] = NA
     }else{
       #aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
@@ -175,14 +214,49 @@ serverAgg <- function(input,output){
         mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
         otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
                               as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
-                              fun.aggregate=median,na.rm=T,fill=0)  
+                              fun.aggregate=mean,na.rm=T,fill=0)
       }else{
-       aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
-                        value.var="taxonID",fun.aggregate=length,fill=0)
-       mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
-       otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
-                             as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
-                             fun.aggregate=median,na.rm=T,fill=0)  
+        if(input$group=="smallMammal"){
+          aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
+                           value.var="taxonID",fun.aggregate=length,fill=0)
+          mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
+          otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
+                                as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
+                                fun.aggregate=mean,na.rm=T,fill=0)
+        }else{
+          if(input$group=="mosquito"){
+            aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
+                             value.var="estimatedAbundance",fun.aggregate=sum,na.rm=T,fill=0)
+            mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
+            otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars,"trapHours")],id.vars=aggVars),
+                                  as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
+                                  fun.aggregate=mean,na.rm=T,fill=0)  
+            eventID <- apply(dataAllDomains[,aggVars,drop=F],1,paste0,collapse="_")
+            unieventID <- apply(aggData[,aggVars,drop=F],1,paste0,collapse="_")
+            numTraps <- lapply(unieventID,function(ev)sum(eventID==ev))
+            names(numTraps) = unieventID
+            numTraps <- unlist(numTraps)
+            otheraggData$numTraps <- numTraps
+          }else{
+            if(input$group=="pathogen"){
+              dataAllDomains$finalResult <- (dataAllDomains$finalResult=="Y")
+              aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
+                               value.var="finalResult",fun.aggregate=sum,na.rm=T,fill=0)
+              mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
+              otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars,"poolSize")],id.vars=aggVars),
+                                    as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
+                                    fun.aggregate=mean,na.rm=T,fill=0)  
+            }else{
+              pres.fn <- function(x){as.numeric(length(x)>0)}
+              aggData <- dcast(dataAllDomains,as.formula(paste(paste(aggVars,collapse="+"),"~ taxonID")),
+                               value.var="taxonID",fun.aggregate=pres.fn,fill=0)
+              mixVars <- unique(c(mixVars,"decimalLatitude","decimalLongitude"))
+              otheraggData <- dcast(melt(dataAllDomains[,c(aggVars,mixVars)],id.vars=aggVars),
+                                    as.formula(paste(paste(aggVars,collapse="+"),"~ variable")),
+                                    fun.aggregate=mean,na.rm=T,fill=0)  
+            }
+          }
+        }
       }
     }
     

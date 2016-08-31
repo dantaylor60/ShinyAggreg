@@ -2,55 +2,84 @@ Data package from NEON Inc.
 These data are provided under the terms of the NEON data policy, included in this data download.
 Data Product ID: NEON.DOM.SITE.DP1.10022.001
 Data Product Name: Ground beetles sampled from pitfall traps
-Date-Time of Query Submission: 2015-04-29 13:08:05
-Start Date-Time for Data: 2014-04-01 00:00:00
-End Date-Time for Data: 2014-09-30 00:00:00
+Date-Time of Query Submission (UTC): 2016-08-12 22:08:53
+Start Date-Time for Data (UTC): 2013-07-01 00:00:00
+End Date-Time for Data (UTC): 2015-09-30 23:59:59
+Data Package Type: Basic
 
 Site: BART Bartlett Experimental Forest Site, RELOCATABLE
-Geographic coordinates (lat/long): 44.06388/-71.28731
+Geographic coordinates (lat/long): 44.0638694444/-71.287375
 Domain: D01 Northeast
 
 Site: HARV Harvard Forest Site, CORE
-Geographic coordinates (lat/long): 42.5369/-72.17266
+Geographic coordinates (lat/long): 42.53691111/-72.17265
 Domain: D01 Northeast
 
 Site: SCBI Smithsonian Conservation Biology Institute Site, CORE
-Geographic coordinates (lat/long): 38.89292/-78.1395
+Geographic coordinates (lat/long): 38.892925/-78.1394944444
+Domain: D02 Mid-Atlantic
+
+Site: SERC Smithsonian Environmental Research Center Site, RELOCATABLE
+Geographic coordinates (lat/long): 38.890131/-76.560014
 Domain: D02 Mid-Atlantic
 
 Site: DSNY Disney Wilderness Preserve Site, RELOCATABLE
-Geographic coordinates (lat/long): 28.12504/-81.4362
+Geographic coordinates (lat/long): 28.12505/-81.43619
 Domain: D03 Southeast
 
 Site: OSBS Ordway-Swisher Biological Station Site, CORE
-Geographic coordinates (lat/long): 29.689282/-81.993431
+Geographic coordinates (lat/long): 29.6892820535/-81.9934311263
 Domain: D03 Southeast
 
 Site: JERC Jones Ecological Research Center Site, RELOCATABLE
-Geographic coordinates (lat/long): 31.19484/-84.46861
+Geographic coordinates (lat/long): 31.19483889/-84.46862308
 Domain: D03 Southeast
 
 Site: UNDE UNDERC Site, CORE
-Geographic coordinates (lat/long): 46.23388/-89.53725
+Geographic coordinates (lat/long): 46.23391/-89.537254
 Domain: D05 Great Lakes
 
+Site: UKFS The University of Kansas Field Station Site, RELOCATABLE
+Geographic coordinates (lat/long): 39.040431/-95.19215
+Domain: D06 Prairie Peninsula
+
 Site: ORNL Oak Ridge Site, CORE
-Geographic coordinates (lat/long): 35.96412/-84.2826
+Geographic coordinates (lat/long): 35.9641277778/-84.2825880556
 Domain: D07 Appalachians and Cumberland Plateau
 
 Site: TALL Talladega National Forest Site, CORE
-Geographic coordinates (lat/long): 32.95046/-87.39327
+Geographic coordinates (lat/long): 32.9504701111/-87.3932586389
 Domain: D08 Ozarks Complex
 
+Site: WOOD Woodworth Site, CORE
+Geographic coordinates (lat/long): 47.1281995/-99.2413337
+Domain: D09 Northern Plains
+
 Site: STER Sterling Site, RELOCATABLE
-Geographic coordinates (lat/long): 40.4619/-103.0293
+Geographic coordinates (lat/long): 40.461893852/-103.029290407
 Domain: D10 Central Plains
 
 Site: CPER Central Plains Experimental Range Site, CORE
-Geographic coordinates (lat/long): 40.815534/-104.745602
+Geographic coordinates (lat/long): 40.81553/-104.7456
 Domain: D10 Central Plains
 
-This package was generated on: 2015-04-29
+Site: OAES Klemme Range Research Station Site, RELOCATABLE
+Geographic coordinates (lat/long): 35.4105988889/-99.0587786111
+Domain: D11 Southern Plains
+
+Site: MOAB Moab Site, RELOCATABLE
+Geographic coordinates (lat/long): 38.248283/-109.388273
+Domain: D13 Southern Rockies and Colorado Plateau
+
+Site: JORN Jornada LTER Site, RELOCATABLE
+Geographic coordinates (lat/long): 32.59068/-106.84254
+Domain: D14 Desert Southwest
+
+Site: ONAQ Onaqui-Ault Site, CORE
+Geographic coordinates (lat/long): 40.1775988/-112.4524517
+Domain: D15 Great Basin
+
+This package was generated on: 2016-08-12
 
 This package contains the following files:
 NEON.D01.BART.DP1.10022.001.bet_IDandpinning.csv
@@ -62,6 +91,7 @@ NEON.D01.HARV.DP1.10022.001.bet_sorting.csv
 NEON.D02.SCBI.DP1.10022.001.bet_IDandpinning.csv
 NEON.D02.SCBI.DP1.10022.001.bet_fielddata.csv
 NEON.D02.SCBI.DP1.10022.001.bet_sorting.csv
+NEON.D02.SERC.DP1.10022.001.bet_fielddata.csv
 NEON.D03.DSNY.DP1.10022.001.bet_IDandpinning.csv
 NEON.D03.DSNY.DP1.10022.001.bet_fielddata.csv
 NEON.D03.DSNY.DP1.10022.001.bet_sorting.csv
@@ -74,20 +104,28 @@ NEON.D03.OSBS.DP1.10022.001.bet_sorting.csv
 NEON.D05.UNDE.DP1.10022.001.bet_IDandpinning.csv
 NEON.D05.UNDE.DP1.10022.001.bet_fielddata.csv
 NEON.D05.UNDE.DP1.10022.001.bet_sorting.csv
+NEON.D06.UKFS.DP1.10022.001.bet_fielddata.csv
 NEON.D07.ORNL.DP1.10022.001.bet_IDandpinning.csv
 NEON.D07.ORNL.DP1.10022.001.bet_fielddata.csv
 NEON.D07.ORNL.DP1.10022.001.bet_sorting.csv
 NEON.D08.TALL.DP1.10022.001.bet_IDandpinning.csv
 NEON.D08.TALL.DP1.10022.001.bet_fielddata.csv
 NEON.D08.TALL.DP1.10022.001.bet_sorting.csv
+NEON.D09.WOOD.DP1.10022.001.bet_IDandpinning.csv
+NEON.D09.WOOD.DP1.10022.001.bet_fielddata.csv
+NEON.D09.WOOD.DP1.10022.001.bet_sorting.csv
 NEON.D10.CPER.DP1.10022.001.bet_IDandpinning.csv
 NEON.D10.CPER.DP1.10022.001.bet_fielddata.csv
 NEON.D10.CPER.DP1.10022.001.bet_sorting.csv
 NEON.D10.STER.DP1.10022.001.bet_IDandpinning.csv
 NEON.D10.STER.DP1.10022.001.bet_fielddata.csv
 NEON.D10.STER.DP1.10022.001.bet_sorting.csv
-NEON.DOC.001100vB.pdf
-NEON.DOC.001238vA_DRAFT.pdf
+NEON.D11.OAES.DP1.10022.001.bet_fielddata.csv
+NEON.D13.MOAB.DP1.10022.001.bet_fielddata.csv
+NEON.D14.JORN.DP1.10022.001.bet_fielddata.csv
+NEON.D15.ONAQ.DP1.10022.001.bet_IDandpinning.csv
+NEON.D15.ONAQ.DP1.10022.001.bet_fielddata.csv
+NEON.D15.ONAQ.DP1.10022.001.bet_sorting.csv
 NEON.DP1.10022.001_readme.txt
 NEON.DP1.10022.001_variables.csv
 NeonDataPolicy.txt
@@ -104,10 +142,19 @@ NEON.DOM.SITE.DP1.10022.001_bet_fielddata.csv - Ground beetle metadata on field 
 NEON.DOM.SITE.DP1.10022.001_bet_sorting.csv - Sorting of field-collected pitfall samples by NEON parataxonomists.
 NEON.DOM.SITE.DP1.10022.001_bet_IDandpinning.csv - Ground beetle pinning/pointing and identifications by NEON parataxonomists.
 
+File naming convention for NEON observation systems data files: NEON.DOM.SITE.DPL.PRNUM.REV.DESC, where:
+- NEON denotes the organizational origin of the data product and identifies the product as operational; data collected as part of a special data collection exercise are designated by a separate, unique alphanumeric code created by the PI
+- DOM is a three-character alphanumeric code, referring to the domain of data acquisition (D01 � D20)
+- SITE is four-character alphanumeric code, referring to the site of data acquisition; all sites are designated by a standardized four-character alphabetic code
+- DPL is a three-character alphanumeric code, referring to data product processing level
+- PRNUM is a five-character numeric code, referring to the data product number (see the Data Product Catalog at http://data.neonscience.org/data-product-catalog)
+- REV is a three-digit designation, referring to the revision number of the data product; it is also used to track �Data Product Maturity�, from Engineering �Grade/Provisional to Science-Grade (001 = initial REV, Engineering-Grade or Provisional; 101 = initial REV, Science-Grade)
+- DESC is an abbreviated description of the data product 
+
 Term descriptions, data types, and units can be found in:
 NEON.DP1.10022.001_variables.csv - Descriptions of all fields used in the above data files.
 
-Additional metadata for this data product available for download at http://data.neoninc.org/documents includes:
+Additional metadata for this data product available for download at http://data.neonscience.org/documents includes:
 TOS Protocol and Procedure: Ground Beetle sampling: NEON.DOC.014050.pdf
 TOS Protocol and Procedure: Ground beetle and mosquito specimen processing: NEON.DOC.00100vB.pdf
 NEON Algorithm Theoretical Basis Document: TOS Ground Beetle Abundance and Diversity - QA/QC of Raw Field and Lab Data: NEON.DOC.001238vA_DRAFT.pdf
@@ -125,7 +172,7 @@ Herp taxonomy: NEON_herp_taxonomy.zip
 Herp native status codes: NEON_herp_nativeStatusCodes.zip
 - Geographic distributions and nativity status based on range maps provided by the IUCN (International Union for Conservation of Nature), Conservation International & NatureServe (downloaded on October 2, 2014).
 
-These data are considered provisional (created using a baseline algorithm approach with a minimal or reduced set of QA/QC checks). Minor updates to the QA/QC and processing algorithms will occur during construction (prior to 2017). Changes to provisional data products will occur on an as-needed basis. Please check back to this site for updates tracked in change logs. Query reproducibility on provisional data cannot be guaranteed.
+These data are considered provisional (created using a baseline algorithm approach with a minimal or reduced set of QA/QC checks). Minor updates to the QA/QC and processing algorithms will occur during construction (prior to 2017). Changes to provisional data products will occur on an as-needed basis. Please check back to this site for updates tracked in change logs. Query reproducibility on provisional data cannot be guaranteed.  
 
 Change log:
 

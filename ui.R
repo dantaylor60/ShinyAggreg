@@ -1,7 +1,8 @@
 ui <- shinyUI(fluidPage(
   headerPanel('NEON data aggregation by species'),
   sidebarPanel(
-    selectInput('group','data type',c('smallMammal','carabid','plantPresenceCover')),
+    selectInput('group','data type',c('smallMammal','carabid','mosquito',
+                                      'pathogen','plantPresenceCover')),
     selectInput('space.Agg','spatial scale',c('byDomain','bySite','byPlot')),
     selectInput('time.Agg','temporal scale',c("aggAll",'byYear','byMonthYear','byBout')),
     selectInput('typeFiles','file type for plant presence',c("none",'1m2Data','10m2Data','100m2Data','400m2Data')),
@@ -13,9 +14,10 @@ ui <- shinyUI(fluidPage(
   mainPanel(
     tabsetPanel(
       tabPanel('help',
-               em(helpText("This code will help you extract data from the NEON project for three different 
-                            types of species: small mammals, carabids and plant cover.  These data can then be aggregated 
-                           using different choices of spatial and temporal resolution.")),
+               em(helpText("This code will help you extract data from the NEON project for four different 
+                            taxa (small mammals, carabids, mosquitoes, plant cover) and for pathogen presence 
+                            in mosquitoes.  These data can then be aggregated using different choices of 
+                           spatial and temporal resolution.")),
                helpText(strong('data type:'), "Choose the taxa for which you want data."),
                helpText(strong('spatial scale:'), "Choice of spatial aggregation scale."),
                helpText(strong('temporal scale:'), "Choice of temporal aggregation scale."),
