@@ -1,0 +1,81 @@
+Data package from NEON Inc.
+These data are provided under the terms of the NEON data policy, included in this data download.
+Data Product ID: NEON.DOM.SITE.DP1.10043.001
+Data Product Name: Mosquitoes sampled from CO2 traps
+Date-Time of Query Submission (UTC): 2016-08-12 22:11:26
+Start Date-Time for Data (UTC): 2014-04-01 00:00:00
+End Date-Time for Data (UTC): 2014-09-30 23:59:59
+Data Package Type: Basic
+
+Site: OSBS Ordway-Swisher Biological Station Site, CORE
+Geographic coordinates (lat/long): 29.6892820535/-81.9934311263
+Domain: D03 Southeast
+
+Site: TALL Talladega National Forest Site, CORE
+Geographic coordinates (lat/long): 32.9504701111/-87.3932586389
+Domain: D08 Ozarks Complex
+
+Site: STER Sterling Site, RELOCATABLE
+Geographic coordinates (lat/long): 40.461893852/-103.029290407
+Domain: D10 Central Plains
+
+Site: CPER Central Plains Experimental Range Site, CORE
+Geographic coordinates (lat/long): 40.81553/-104.7456
+Domain: D10 Central Plains
+
+This package was generated on: 2016-08-12
+
+This package contains the following files:
+NEON.D03.OSBS.DP1.10043.001.mos_archival.csv
+NEON.D03.OSBS.DP1.10043.001.mos_identification.csv
+NEON.D03.OSBS.DP1.10043.001.mos_samplingeffort.csv
+NEON.D08.TALL.DP1.10043.001.mos_archival.csv
+NEON.D08.TALL.DP1.10043.001.mos_identification.csv
+NEON.D08.TALL.DP1.10043.001.mos_samplingeffort.csv
+NEON.D10.CPER.DP1.10043.001.mos_archival.csv
+NEON.D10.CPER.DP1.10043.001.mos_identification.csv
+NEON.D10.CPER.DP1.10043.001.mos_samplingeffort.csv
+NEON.D10.STER.DP1.10043.001.mos_archival.csv
+NEON.D10.STER.DP1.10043.001.mos_identification.csv
+NEON.D10.STER.DP1.10043.001.mos_samplingeffort.csv
+NEON.DP1.10043.001_readme.txt
+NEON.DP1.10043.001_variables.csv
+NeonDataPolicy.txt
+
+
+
+
+Data Product Description
+This data product contains the quality-controlled, native sampling resolution data from NEON's mosquito sampling protocol. 
+Mosquito abundance and diversity are sampled at regular intervals by NEON field technicians at core and relocatable sites. During the field season, sampling occurs every two weeks or once per month at core and relocatable sites, respectively. The field season begins when temperatures are above a minimum threshold (10C) and/or mosquitoes have been observed flying at the core site during off-season sampling. The field season may be limited by logistical constraints (e.g., deep snow, limited labor resources). Mosquitoes are sampled using CDC CO2 traps (10 traps per site). At most, a bout of sampling will yield 30 samples (3 samples per trap; 10 traps per site); sampling includes two overnight samples and one diurnal sample. For additional details on protocol, see the TOS Protocol and Procedure: Mosquito Sampling. Following collection, samples are sent to a professional taxonomist where a subsample each catch generated from each trap is identified to species and sex. Identified mosquitoes are then processed for pathogen analysis or preserved for final archiving. Products resulting from this sampling and processing include records of when mosquitoes were sampled, the taxonomic and abundance data for a subset of mosquitoes captured, and information about the material archived from the sample.
+
+The data download contains 3 files:
+NEON.DOM.SITE.DP1.10043.001_mos_samplingeffort - Mosquito trapping data from field operations.
+NEON.DOM.SITE.DP1.10043.001_mos_identification - Mosquito taxonomic data from external labs.
+NEON.DOM.SITE.DP1.10043.001_mos_archival - Mosquito archival information from external labs.
+
+File naming convention for NEON observation systems data files: NEON.DOM.SITE.DPL.PRNUM.REV.DESC, where:
+- NEON denotes the organizational origin of the data product and identifies the product as operational; data collected as part of a special data collection exercise are designated by a separate, unique alphanumeric code created by the PI
+- DOM is a three-character alphanumeric code, referring to the domain of data acquisition (D01 - D20)
+- SITE is four-character alphanumeric code, referring to the site of data acquisition; all sites are designated by a standardized four-character alphabetic code
+- DPL is a three-character alphanumeric code, referring to data product processing level
+- PRNUM is a five-character numeric code, referring to the data product number (see the Data Product Catalog at http://data.neoninc.org/data-product-catalog)
+- REV is a three-digit designation, referring to the revision number of the data product; it is also used to track "Data Product Maturity", from Engineering -Grade/Provisional to Science-Grade (001 = initial REV, Engineering-Grade or Provisional; 101 = initial REV, Science-Grade)
+- DESC is an abbreviated description of the data product 
+
+Term descriptions, data types, and units can be found in:
+NEON.DOM.SITE.DP1.10043.001_variables.csv - Descriptions of all fields used in the above data files.
+
+Additional metadata for this data product available for download at http://data.neoninc.org/documents includes:
+TOS Protocol and Procedure: Mosquito Sampling: NEON.DOC.014049vG.pdf
+NEON Algorithm Theoretical Basis Document: TOS Mosquito Abundance and Diversity - QA/QC of Raw Field and Lab Data: NEON.DOC.001239vA.pdf
+Sampling locations: NEON_TOS_spatialData.zip
+Mosquito taxonomy: NEON_mos_taxonomy.zip - Taxonomy based on Darsie Jr., R. F., and R. A. Ward. 2005. Identification and geographical distribution of the mosquitoes of North America, North of Mexico. University Press of Florida, Gainesville.
+
+All of the above data are also directly linked to the mosquito pathogen data, as described in the NEON Algorithm Theoretical Basis Document: TOS Mosquito Abundance and Diversity - QA/QC of Raw Field and Lab Data.
+
+These data are considered provisional (created using a baseline algorithm approach with a minimal or reduced set of QA/QC checks). Minor updates to the QA/QC and processing algorithms will occur during construction (prior to 2017). Changes to provisional data products will occur on an as-needed basis.  Please check back to this site for updates tracked in change logs.  Query reproducibility on provisional data cannot be guaranteed.  
+
+Change log:
+5/15/2016: Mosquito taxonomy was severely revised in 2004 such that genus Aedes was drastically reorganized. At a later date, mosquito data will be reprocessed to reflect this updated taxonomy.
+

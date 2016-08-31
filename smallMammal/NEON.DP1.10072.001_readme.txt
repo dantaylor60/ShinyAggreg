@@ -2,55 +2,72 @@ Data package from NEON Inc.
 These data are provided under the terms of the NEON data policy, included in this data download.
 Data Product ID: NEON.DOM.SITE.DP1.10072.001
 Data Product Name: Small mammal box trapping
-Date-Time of Query Submission: 2015-05-01 16:19:24
-Start Date-Time for Data: 2013-07-01 00:00:00
-End Date-Time for Data: 2015-03-31 00:00:00
+Date-Time of Query Submission (UTC): 2016-08-12 22:15:49
+Start Date-Time for Data (UTC): 2013-06-01 00:00:00
+End Date-Time for Data (UTC): 2015-05-31 23:59:59
+Data Package Type: Basic
 
 Site: BART Bartlett Experimental Forest Site, RELOCATABLE
-Geographic coordinates (lat/long): 44.06388/-71.28731
+Geographic coordinates (lat/long): 44.0638694444/-71.287375
 Domain: D01 Northeast
 
 Site: HARV Harvard Forest Site, CORE
-Geographic coordinates (lat/long): 42.5369/-72.17266
+Geographic coordinates (lat/long): 42.53691111/-72.17265
 Domain: D01 Northeast
 
 Site: SCBI Smithsonian Conservation Biology Institute Site, CORE
-Geographic coordinates (lat/long): 38.89292/-78.1395
+Geographic coordinates (lat/long): 38.892925/-78.1394944444
+Domain: D02 Mid-Atlantic
+
+Site: SERC Smithsonian Environmental Research Center Site, RELOCATABLE
+Geographic coordinates (lat/long): 38.890131/-76.560014
 Domain: D02 Mid-Atlantic
 
 Site: DSNY Disney Wilderness Preserve Site, RELOCATABLE
-Geographic coordinates (lat/long): 28.12504/-81.4362
+Geographic coordinates (lat/long): 28.12505/-81.43619
 Domain: D03 Southeast
 
 Site: OSBS Ordway-Swisher Biological Station Site, CORE
-Geographic coordinates (lat/long): 29.689282/-81.993431
+Geographic coordinates (lat/long): 29.6892820535/-81.9934311263
 Domain: D03 Southeast
 
 Site: JERC Jones Ecological Research Center Site, RELOCATABLE
-Geographic coordinates (lat/long): 31.19484/-84.46861
+Geographic coordinates (lat/long): 31.19483889/-84.46862308
 Domain: D03 Southeast
 
 Site: UNDE UNDERC Site, CORE
-Geographic coordinates (lat/long): 46.23388/-89.53725
+Geographic coordinates (lat/long): 46.23391/-89.537254
 Domain: D05 Great Lakes
 
 Site: ORNL Oak Ridge Site, CORE
-Geographic coordinates (lat/long): 35.96412/-84.2826
+Geographic coordinates (lat/long): 35.9641277778/-84.2825880556
 Domain: D07 Appalachians and Cumberland Plateau
 
 Site: TALL Talladega National Forest Site, CORE
-Geographic coordinates (lat/long): 32.95046/-87.39327
+Geographic coordinates (lat/long): 32.9504701111/-87.3932586389
 Domain: D08 Ozarks Complex
 
+Site: WOOD Woodworth Site, CORE
+Geographic coordinates (lat/long): 47.1281995/-99.2413337
+Domain: D09 Northern Plains
+
 Site: STER Sterling Site, RELOCATABLE
-Geographic coordinates (lat/long): 40.4619/-103.0293
+Geographic coordinates (lat/long): 40.461893852/-103.029290407
 Domain: D10 Central Plains
 
 Site: CPER Central Plains Experimental Range Site, CORE
-Geographic coordinates (lat/long): 40.815534/-104.745602
+Geographic coordinates (lat/long): 40.81553/-104.7456
 Domain: D10 Central Plains
 
-This package was generated on: 2015-05-01
+Site: OAES Klemme Range Research Station Site, RELOCATABLE
+Geographic coordinates (lat/long): 35.4105988889/-99.0587786111
+Domain: D11 Southern Plains
+
+Site: ONAQ Onaqui-Ault Site, CORE
+Geographic coordinates (lat/long): 40.1775988/-112.4524517
+Domain: D15 Great Basin
+
+This package was generated on: 2016-08-12
 
 This package contains the following files:
 NEON.D01.BART.DP1.10072.001.mam_capturedata.csv
@@ -62,6 +79,9 @@ NEON.D01.HARV.DP1.10072.001.mam_pertrapnight.csv
 NEON.D02.SCBI.DP1.10072.001.mam_capturedata.csv
 NEON.D02.SCBI.DP1.10072.001.mam_perplotnight.csv
 NEON.D02.SCBI.DP1.10072.001.mam_pertrapnight.csv
+NEON.D02.SERC.DP1.10072.001.mam_capturedata.csv
+NEON.D02.SERC.DP1.10072.001.mam_perplotnight.csv
+NEON.D02.SERC.DP1.10072.001.mam_pertrapnight.csv
 NEON.D03.DSNY.DP1.10072.001.mam_capturedata.csv
 NEON.D03.DSNY.DP1.10072.001.mam_perplotnight.csv
 NEON.D03.DSNY.DP1.10072.001.mam_pertrapnight.csv
@@ -80,45 +100,62 @@ NEON.D07.ORNL.DP1.10072.001.mam_pertrapnight.csv
 NEON.D08.TALL.DP1.10072.001.mam_capturedata.csv
 NEON.D08.TALL.DP1.10072.001.mam_perplotnight.csv
 NEON.D08.TALL.DP1.10072.001.mam_pertrapnight.csv
+NEON.D09.WOOD.DP1.10072.001.mam_capturedata.csv
+NEON.D09.WOOD.DP1.10072.001.mam_perplotnight.csv
+NEON.D09.WOOD.DP1.10072.001.mam_pertrapnight.csv
 NEON.D10.CPER.DP1.10072.001.mam_capturedata.csv
 NEON.D10.CPER.DP1.10072.001.mam_perplotnight.csv
 NEON.D10.CPER.DP1.10072.001.mam_pertrapnight.csv
 NEON.D10.STER.DP1.10072.001.mam_capturedata.csv
 NEON.D10.STER.DP1.10072.001.mam_perplotnight.csv
 NEON.D10.STER.DP1.10072.001.mam_pertrapnight.csv
-NEON.DOC.000481vD.pdf
-NEON.DOC.001244vA_DRAFT.pdf
+NEON.D11.OAES.DP1.10072.001.mam_capturedata.csv
+NEON.D11.OAES.DP1.10072.001.mam_perplotnight.csv
+NEON.D11.OAES.DP1.10072.001.mam_pertrapnight.csv
+NEON.D15.ONAQ.DP1.10072.001.mam_capturedata.csv
+NEON.D15.ONAQ.DP1.10072.001.mam_perplotnight.csv
+NEON.D15.ONAQ.DP1.10072.001.mam_pertrapnight.csv
 NEON.DP1.10072.001_readme.txt
 NEON.DP1.10072.001_variables.csv
-NEON_TOS_spatialData.zip
 NeonDataPolicy.txt
 
 
 
 Data Product Description
-
-This data product contains the quality-controlled, native sampling resolution data from NEON's small mammal sampling protocol. Small mammal abundance and diversity are sampled at regular intervals by NEON field technicians at core and relocatable sites. Sampling is based on the lunar calendar, with timing of sampling constrained to occur within 10 days before or after the new moon. Sampling may occur as frequently as every new moon (i.e., 12 or 13 times per year) or as infrequently as 4 times per year (i.e., every other new moon from April - October), depending on logistical constraints (e.g., deep snow, limited labor resources). Small mammals are sampled using box traps (models LFA, XLK, H.B. Sherman Traps, Inc., Tallahassee, FL, USA) arrayed in three to eight (depending on the size of the site) 10 x 10 grids with 10m spacing between traps. For additional details on protocol, see the TOS Protocol and Procedure: Small Mammal Sampling (url). Products resulting from this sampling include the species identification and unique identifier for each individual captured, as well as a suite of standard size measurements and reproductive condition data. Unique identifiers are in the format: NEON.MAM.DXX.XXXXXX, where the last 6 characters include either (1) the last 6 characters of the serial number of the PIT tag or (2) the 4 digit ear tag.
+This data product contains the quality-controlled, native sampling resolution data from NEON's small mammal sampling protocol. Small mammal abundance and diversity are sampled at regular intervals by NEON field technicians at core and relocatable sites. Sampling is based on the lunar calendar, with timing of sampling constrained to occur within 10 days before or after the new moon. Sampling may occur as frequently as every new moon (i.e., 12 or 13 times per year) or as infrequently as 4 times per year (i.e., every other new moon from April - October), depending on logistical constraints (e.g., deep snow, limited labor resources). Typically, core sites are sampled 6 times per year, and relocatable sites 4 times per year. Small mammals are sampled using box traps (models LFA, XLK, H.B. Sherman Traps, Inc., Tallahassee, FL, USA) and, at sites in Puerto Rico and Hawaii, larger wire traps suitable for catching Rattus spp. (model 201, Tomahawk Live Trap, Hazlehurst, WI, USA). Box traps are arrayed in three to eight (depending on the size of the site) 10 x 10 grids with 10m spacing between traps at all sites. Where used, wire traps are used only in alternate bouts of trapping and placed at every other trap station in the 10 x 10 grid, such that a total of 50 wire traps are set. For additional details on protocol, see the TOS Protocol and Procedure: Small Mammal Sampling (http://data.neonscience.org/documents). Products resulting from this sampling include the species identification and unique identifier for each individual captured, as well as a suite of standard size measurements and reproductive condition data.   
 
 The data download contains 3 files:
 NEON.DOM.SITE.DP1.10072.001.mam_perplotnight - Small mammal trapping summary data per plot per night.
 NEON.DOM.SITE.DP1.10072.001.mam_pertrapnight - Small mammal trapping data per trap per night.
 NEON.DOM.SITE.DP1.10072.001.mam_capturedata - Small mammal mark-recapture data.
 
+File naming convention for NEON observation systems data files: NEON.DOM.SITE.DPL.PRNUM.REV.DESC, where:
+- NEON denotes the organizational origin of the data product and identifies the product as operational; data collected as part of a special data collection exercise are designated by a separate, unique alphanumeric code created by the PI
+- DOM is a three-character alphanumeric code, referring to the domain of data acquisition (D01 � D20)
+- SITE is four-character alphanumeric code, referring to the site of data acquisition; all sites are designated by a standardized four-character alphabetic code
+- DPL is a three-character alphanumeric code, referring to data product processing level
+- PRNUM is a five-character numeric code, referring to the data product number (see the Data Product Catalog at http://data.neonscience.org/data-product-catalog)
+- REV is a three-digit designation, referring to the revision number of the data product; it is also used to track �Data Product Maturity�, from Engineering �Grade/Provisional to Science-Grade (001 = initial REV, Engineering-Grade or Provisional; 101 = initial REV, Science-Grade)
+- DESC is an abbreviated description of the data product 
+
 Term descriptions, data types, an units can be found in:
 NEON.DP1.10072.001_variables.csv - Descriptions of all fields used in the above data files.
 
-Additional metadata for this data product available for download (at http://data.neoninc.org/documents) includes:
-TOS Protocol and Procedure: Small Mammal Sampling: NEON.DOC.000481vD.pdf
-NEON Algorithm Theoretical Basis Document: TOS Small Mammal Abundance and Diversity - QA/QC of Raw Field and Lab Data: NEON.DOC.001244vA_DRAFT.pdf (url)
+Additional metadata for this data product available for download (http://data.neonscience.org/documents) includes:
+TOS Protocol and Procedure: Small Mammal Sampling: NEON.DOC.000481vF.pdf
+NEON Algorithm Theoretical Basis Document: TOS Small Mammal Abundance and Diversity - QA/QC of Raw Field and Lab Data: NEON.DOC.001244vA_DRAFT.pdf
 Sampling locations (NEON_TOS_spatialData.zip)
 Small mammal taxonomy (NEON_mam_taxonomy.zip) - Taxonomy based on Wilson D. E. and D. M. Reeder. 2005. Mammal Species of the World; A Taxonomic and Geographic Reference. Third edition. Johns Hopkins University Press; Baltimore, MD.
 Small mammal native status codes (NEON_mam_nativeStatusCodes.zip) - Geographic distributions and nativity status based on Kays R. W. and D. E. Wilson. 2009. Mammals of North America. 2nd edition. Princeton University Press; Princeton; NJ.
 
-All of the above data are also directly linked to the rodent-borne pathogen data, as described in the NEON Algorithm Theoretical Basis Document: Rodent-borne Pathogens - QA/QC of Raw Field and Lab Data and Prevalence Measure Calculations.
+All of the above data are also directly linked to the rodent-borne pathogen data, as described in the NEON Algorithm Theoretical Basis Document: Rodent-borne Pathogens - QA/QC of Raw Field and Lab Data.
 
-These data are considered provisional (created using a baseline algorithm approach with a minimal or reduced set of QA/QC checks). Minor updates to the QA/QC and processing algorithms will occur during construction (prior to 2017). Changes to provisional data products will occur on an as-needed basis. Please check back to this site for updates tracked in change logs. Query reproducibility on provisional data cannot be guaranteed.
+Protection of species of concern: At most sites, taxonomic IDs of species of concern have been �fuzzed�, i.e., reported at a higher taxonomic rank than the raw data, to avoid publishing locations of sensitive species. For a few sites with stricter regulations (e.g., Great Smoky Mountains National Park (GRSM)), records for species of concern are not published.
+
+These data are considered provisional (created using a baseline algorithm approach with a minimal or reduced set of QA/QC checks). Minor updates to the QA/QC and processing algorithms will occur during construction (prior to 2017). Changes to provisional data products will occur on an as-needed basis. Please check back to this site for updates tracked in change logs. Query reproducibility on provisional data cannot be guaranteed.  
 
 Change log:
+05/19/2015: Corrected error in taxon table that prevented publication of records for NEFL at JERC; PEGO at JERC, OSBS, and DSNY; and PEPO at JERC and TALL
 11/20/2014: Corrected pertrapnight duplicate records test
 11/20/2014: Corrected calculation of setTraps and disturbedTraps to include only unique values of trapCoordinates to prevent errors arising from duplicate records
 11/20/2014: Corrected algorithm to assign reproductiveCondition
